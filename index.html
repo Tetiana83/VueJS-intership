@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="left-wrapper">
+            <div class="left-first-block">
+                <div class="left-logo"><img src="./assets/Logo@3x.svg" alt=""></div>
+                <div class="left-search"><img src="./assets/Search@3x.svg" alt=""></div>
+            </div>
+            <div class="left-second-block">
+                <div>
+                    <div class="left-user-avatar"><img src="https://i.pravatar.cc/150?img=49" alt=""></div>
+                    <div class="left-user-data">
+                        <p>Jean Gonzales</p>
+                        <p>Product Owner</p>
+                    </div>
+                </div>
+                <div class="left-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="left-third-block">
+                <div>
+                    <p>372</p>
+                    <p>Completed Tasks</p>
+                </div>
+                <div>
+                    <p>11</p>
+                    <p>Open Tasks</p>
+                </div>
+            </div>
+            <div class="left-menu">
+                <div class="menu-title">Menu</div>
+                <div class="menu-list">
+                    <ul>
+                        <li>Home</li>
+                        <li>My Tasks</li>
+                        <li class="notifi">
+                            <span>3</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-wrapper">
+            <div class="header">
+                <div class="header-content">
+                    <div>
+                        <div class="logo"><img src="./assets/Shapes@2x.png" alt=""></div>
+                        <div class="header-title">Website Redesign</div>
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=3" alt="">
+                        </div>
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=4" alt="">
+                        </div>
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="">
+                        </div>
+                        <div class="share">
+                            <p>Share</p>
+                        </div>
+                        <div class="chat">                                
+                            <div><img src="./assets/CombinedShape@1x.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="nav-bar-wrapper">
+                    <ul>
+                        <li id="tab1" onclick="active(this)"><a href="#" class="first">Tasks</a></li>
+                        <li id="tab2"  onclick="active(this)"><a href="#">Kanban</a></li>
+                        <li id="tab3"  onclick="active(this)"><a href="#" class="active">Activity</a></li>
+                        <li id="tab4"  onclick="active(this)"><a href="#">Calendar</a></li>
+                        <li id="tab5"  onclick="active(this)"><a href="#">Files</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body">
+                <div class="content-wrapper">
+                    <div class="today"><p>Today</p></div>
+                    <div class="content-section">
+                        <div class="green-circle">
+                            <img src="./assets/Icon@3x.svg" alt="">
+                        </div>
+                        <div class="content-text-block"><p>Darika Samak mark as done Listing on Product Hunt so that we can reach as many potential users</p></div>
+                        <div class="time"><span>8:40 PM</span></div>
+                    </div>
+                    <div class="content-section">
+                        <div class="yellow-circle">
+                            <img src="./assets/Icon@3x.svg" alt="">
+                        </div>
+                        <div class="content-text-block"><p>Emilee Simchenko commented on Account for teams and personal in bottom style</p></div>
+                        <div class="time"><span>7:32 PM</span></div>
+                    </div>
+                    <div class="content-minibox">
+                        <div class="content-minibox-text">
+                            During a project build, it is necessary to evaluate the product design and development against project requirements and outcomes
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <div class="blue-circle">
+                            <img src="./assets/Icon@3x.svg" alt="">
+                        </div>
+                        <div class="content-text-block"><p>Darika Samak uploaded 4 files on An option to search in current projects or in all projects</p></div>
+                        <div class="time"><span>6:02 PM</span></div>
+                    </div>
+                    <div>
+                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
+                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
+                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
+                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function active(elem) {
+            const activElement = document.getElementsByClassName("active");
+            if(activElement.length > 0) {
+                activElement[0].classList.remove("active");
+                const el = document.getElementById(elem.id);
+                el.classList.add("active");        
+            }
+        }
+    </script>
+</body>
+</html>
