@@ -30,12 +30,12 @@
                 </div>
             </div>
             <div class="left-third-block">
-                <div>
-                    <p>372</p>
+                <div id="button">
+                    <p id="done-task">372</p>
                     <p>Completed Tasks</p>
                 </div>
                 <div>
-                    <p>11</p>
+                    <p id="open-task">11</p>
                     <p>Open Tasks</p>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         <li>Home</li>
                         <li>My Tasks</li>
                         <li class="notifi">
-                            <span>3</span>
+                            <span id="notifNum">3</span>
                         </li>
                     </ul>
                 </div>
@@ -112,25 +112,27 @@
                         <div class="content-text-block blue-icon"><p>Darika Samak uploaded 4 files on An option to search in current projects or in all projects</p></div>
                         <div class="time"><span>6:02 PM</span></div>
                     </div>
-                    <div>
-                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
-                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
-                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
-                        <div class="image"><img src="https://picsum.photos/200" alt=""></div>
+                    <div class="img-wrapper">
+                        <div class="image" id="pic1" onclick="activeImg1(this)"><img src="https://picsum.photos/200" alt=""></div>
+                        <div class="image" id="pic2"onclick="activeImg2(this)"><img src="https://picsum.photos/200" alt=""></div>
+                        <div class="image" id="pic3"onclick="activeImg3(this)"><img src="https://picsum.photos/200" alt=""></div>
+                        <div class="image" id="pic4"onclick="activeImg4(this)"><img src="https://picsum.photos/200" alt=""></div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="window-wrapper" id="windowWrapper"> 
+            <div class="ask-window" id="askWindow">
+                <div>
+                    <h3>Are you sure you want to change the number of tasks?</h3>
+                </div>
+                <div class="answers"> 
+                    <button class="yes" id="btnYes">yes</button>
+                    <button class="no" id="btnNo">no</button>
+                </div>
+            </div>
+        </div> 
     </div>
-    <script>
-        function active(elem) {
-            const activElement = document.getElementsByClassName("active");
-            if(activElement.length > 0) {
-                activElement[0].classList.remove("active");
-                const el = document.getElementById(elem.id);
-                el.classList.add("active");        
-            }
-        }
-    </script>
+    <script src="/script.js"></script>
 </body>
 </html>
