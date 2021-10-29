@@ -35,12 +35,19 @@ function active(elem) {
     }
  }
 
-let notifi = document.getElementById("notifNum").innerHTML;
-let notiNum = Number(notifi);
+// let notifi = document.getElementById("notifNum").innerHTML;
+// let notiNum = Number(notifi);
+// let pictures = document.querySelectorAll(".image");
+// pictures.forEach((p, i) => {
+//     p.addEventListener("click", function() {
+//         notiNum = i;
+//         document.getElementById("notifNum").innerHTML = notiNum;
+//     })
+// })
+
 let pictures = document.querySelectorAll(".image");
 pictures.forEach((p, i) => {
-    p.addEventListener("click", function() {
-        notiNum = i;
-        document.getElementById("notifNum").innerHTML = notiNum;
+        p.addEventListener("click", function() {
+            document.getElementById("notifNum").innerHTML = `${i}`;
+        })
     })
-})
